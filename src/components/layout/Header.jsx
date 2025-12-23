@@ -30,7 +30,10 @@ const Header = ({ onMenuClick }) => {
             <Menu className="h-5 w-5" />
           </Button>
           
-          <div className="flex items-center gap-3">
+          <div 
+            className="flex items-center gap-3 cursor-pointer" 
+            onClick={() => navigate('/dashboard')}
+          >
             <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-primary">
               <Dumbbell className="h-5 w-5 text-primary-foreground" />
             </div>
