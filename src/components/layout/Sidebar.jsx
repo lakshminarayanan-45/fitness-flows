@@ -6,7 +6,8 @@ import {
   Dumbbell, 
   History, 
   User,
-  X
+  X,
+  PersonStanding
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -39,7 +40,10 @@ const Sidebar = ({ isOpen, onClose }) => {
         )}
       >
         <div className="flex h-16 items-center justify-between border-b border-border px-4 lg:hidden">
-          <span className="font-display text-lg font-bold text-gradient">FitTrack Pro</span>
+          <div className="flex items-center gap-2">
+            <PersonStanding className="h-6 w-6 text-primary animate-running" />
+            <span className="font-display text-lg font-bold text-gradient">FitTrack Pro</span>
+          </div>
           <Button variant="ghost" size="icon" onClick={onClose}>
             <X className="h-5 w-5" />
           </Button>
